@@ -1,11 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burger Queen</title>
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-  
+   
+    <header>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#location">Location</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Welcome to Burger Queen</h1>
+            <p>Experience the best burgers in town!</p>
+            <a href="#menu" class="btn">View Menu</a>
+        </div>
+    </section>
+
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed gravida leo quis elit malesuada, nec rutrum ipsum vehicula.</p>
+            <!-- Add images or additional content here -->
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu">
+        <div class="container">
+            <h2>Our Menu</h2>
+            <!-- Add menu items dynamically here -->
+            <select name="Country"> 
+                <option value="" selected="selected">Select Country</option> 
+                <option value="United States">United States</option> 
+                <option value="United Kingdom">United Kingdom</option> 
+            </select>
+        </div>
+    </section>
+
+        <!-- Location Section -->
+    <section class="location">
+        <div class="container">
+            <h2>Our Location</h2>
+            <div id="map"></div>
+            <form action="http://maps.google.com/maps" method="get" target="_blank">
+                <label for="locationInput">Enter your location</label>
+                <input type="text" id="locationInput" name="saddr" />
+                <input type="hidden" name="daddr" value="255 Malaga Road, Oshawa, Ontario" />
+                <input type="submit" value="Get directions" />
+                <input type="button" id="orderButton" value="Place Order" onclick="createAlerts()" />
+            </form>
+        </div>
+    </section>
+
+    <section class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>For inquiries or reservations, please call us at: 123-456-7890</p>
+            <p>Or email us at: info@burgerqueen.com</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Burger Queen. All rights reserved.</p>
+            <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
